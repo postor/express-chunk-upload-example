@@ -4,7 +4,7 @@ const getUploadRouter = require('express-chunk-upload/get-router')
 let router = Router()
 
 router.use('/upload', getUploadRouter({
-  uploadPath: join(__dirname, '..', 'public', 'uploads')
+  uploadPath: '/tmp/uploads'
 }))
 
 module.exports = router
