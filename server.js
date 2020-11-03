@@ -11,7 +11,7 @@ const apis = require('./apis')
 
 app.prepare().then(() => {
   const server = express()
-  server.use('/uploads',express.static('/tmp/uploads'))
+
   server.use('/apis',apis)
 
   server.all('*', (req, res) => {
